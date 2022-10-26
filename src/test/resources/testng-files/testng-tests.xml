@@ -1,0 +1,17 @@
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >-->
+
+<!--<suite name="SanityTestSuite" verbose="1" >     &lt;!&ndash;BeforeSuite&ndash;&gt;-->
+<!--    <test name="LaunchBrowserTest">         &lt;!&ndash;BeforeTest&ndash;&gt;-->
+<!--        <classes>-->
+<!--            &lt;!&ndash;BeforeClass&ndash;&gt;-->
+<!--            <class name="com.envision.automation.tests.LaunchBrowserTest">-->
+<!--                <methods>-->
+<!--                    &lt;!&ndash;BeforeMethod&ndash;&gt;-->
+<!--                    <include name="testLaunchingOfBrowser" />-->
+<!--                    &lt;!&ndash;AfterMethod&ndash;&gt;-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            &lt;!&ndash;AfterClass&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash;AfterTest&ndash;&gt;-->
+<!--</suite>    &lt;!&ndash;AfterSuite&ndash;&gt;-->
