@@ -1,0 +1,43 @@
+How to read from config file which is of type .properties
+
+Step1: Create an object of Properties classes
+Step2: Locate file on the system
+Step3: Call "load" method of properties class to load properties
+Step4: Fetch the values of parameters using getProperty method
+
+
+-------------------------------------------------------------------
+What is OR or Object Repository?
+In automation in OR file we store locators and their values. It is a way to have a central repository for all your objects.
+
+Advantages:
+All our objects are stored at a single place. Easier to maintain. Removes duplicity.
+
+Disadvantages:
+Over a period of time, it may grow large, and might have performance issues.
+When working in collaboration, one change might affect the whole life.
+
+How to implement?
+Step1: locate OR.properties.
+Step2: Read the value by calling getProperty()
+
+-------------------------------------------------------------------
+
+Page Object Model(POM)
+* It is the style of writing actions into java classes and its popular in Automation Testing. It says for every webpage that you are testing, there should be
+a java class with the same name. And you will record all the elements, actions of that page into the java class, and you
+will return the object of that page.
+
+1. Record all elements - username field, password, field, submit
+2. Record all actions - type into username, password, click - type into username, password, click on submit
+3. Always return the object of that page from the action methods
+
+----------------------------------------------------------------------
+GitHub Notes
+1. Initialize git repository: Git init
+2. Add files: git add .
+3. Commit files: git commit -m "<Your Comments"
+4. Push the code to the branch: git push <branchName>
+5. Create new branch: git checkout -b NAME
+To check the status: git status
+

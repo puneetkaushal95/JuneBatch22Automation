@@ -1,6 +1,7 @@
 package com.envision.automation.pages;
 
 import com.envision.automation.framework.core.BasePage;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 //import org.testng.Assert;
 
@@ -14,7 +15,7 @@ public class HomePage extends BasePage {
 
     public HomePage checkIfSignOutDisplayed() throws IOException {
         boolean status = isDisplayed("HomePage.lnkSignOut");
-       // Assert.assertTrue(status, "Element Sign Out not displayed");
+        Assert.assertTrue("Element Sign Out not displayed", status);
         return this;
     }
 
@@ -25,7 +26,7 @@ public class HomePage extends BasePage {
 
     public HomePage checkIfUsernameLoggedInIsValid(String severus_snape) throws IOException {
         long[] userLoggedIn = new long[0];
-        //Assert.assertEquals(userLoggedIn, getUsernameLoggedIn());
+        Assert.assertEquals(userLoggedIn, getUsernameLoggedIn());
         return this;
     }
 }

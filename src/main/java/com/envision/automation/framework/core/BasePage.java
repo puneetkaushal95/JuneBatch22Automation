@@ -93,10 +93,10 @@ public class BasePage {
         WebElement element = null;
         try {
             By by = getFindBy(orElement);
-//            element = this.baseDriver.findElement(by);
-            element = new WebDriverWait(baseDriver, Duration.ofSeconds(10))
+            element = this.baseDriver.findElement(by);
+            element = new WebDriverWait(baseDriver, ConfigLoader.getWaitTime())
                     .until(ExpectedConditions.presenceOfElementLocated(by));
-            element = new WebDriverWait(baseDriver,Duration.ofSeconds(10))
+            element = new WebDriverWait(baseDriver,ConfigLoader.getWaitTime())
                    .until(ExpectedConditions.visibilityOfElementLocated(by));
 
             Reporter.logPassedStep("OR Element [" + orElement + "] found successfully");
@@ -110,12 +110,12 @@ public class BasePage {
         List<WebElement> elements = null;
         try {
             By by = getFindBy(orElement);
-//            elements = this.baseDriver.findElements(by);
+            elements = this.baseDriver.findElements(by);
 
-            elements = new WebDriverWait(baseDriver, Duration.ofSeconds(10))
+            elements = new WebDriverWait(baseDriver, ConfigLoader.getWaitTime())
                     .until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-//            elements = new WebDriverWait(baseDriver,Duration.ofSeconds(10))
-//                    .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
+            elements = new WebDriverWait(baseDriver,ConfigLoader.getWaitTime())
+                    .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
 
             Reporter.logPassedStep("Element [" + orElement + "] found successfully");
 
@@ -128,7 +128,7 @@ public class BasePage {
     public void clickOn(String elementName) throws IOException {
         try {
             WebElement element = findWebElement(elementName);
-            new WebDriverWait(baseDriver, Duration.ofSeconds(10))
+            new WebDriverWait(baseDriver, ConfigLoader.getWaitTime())
                     .until(ExpectedConditions.elementToBeClickable(element));
             element.click();
             Reporter.logPassedStep("Clicked on element [" + elementName + "] successfully");
@@ -140,7 +140,7 @@ public class BasePage {
     public void typeInto(String elementName, String contentToType) throws IOException, InterruptedException {
         try {
             WebElement element = findWebElement(elementName);
-            new WebDriverWait(baseDriver, Duration.ofSeconds(10))
+            new WebDriverWait(baseDriver, ConfigLoader.getWaitTime())
                     .until(ExpectedConditions.elementToBeClickable(element));
             element.click();
             Thread.sleep(100);

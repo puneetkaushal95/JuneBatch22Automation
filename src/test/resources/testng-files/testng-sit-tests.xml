@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="SanityTestSuite" verbose="1" >     <!--BeforeSuite-->
+    <test name="LaunchBrowserTest">         <!--BeforeTest-->
+        <classes>
+            <!--BeforeClass-->
+            <class name="com.envision.automation.tests.LoginTests">
+                <methods>
+                    <!--BeforeMethod-->
+                    <include name="validateSuccessfulLoginToApplication" />
+                    <!--AfterMethod-->
+                </methods>
+            </class>
+            <!--AfterClass-->
+        </classes>
+    </test> <!--AfterTest-->
+</suite>    <!--AfterSuite-->
